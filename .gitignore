@@ -1,5 +1,9 @@
 # Exclude PyCharm configuration directory
+*.pyc
 .idea/
+.maps/
+.MAPS/
+*party/
 
 # Exclude the results that you may have produced in past experiments
 results/

@@ -42,7 +42,6 @@ def _get_config(params, arg_name, subfolder):
             config_name = _v.split("=")[1]
             del params[_i]
             break
-
     if config_name is not None:
         with open(os.path.join(os.path.dirname(__file__), "config", subfolder, "{}.yaml".format(config_name)), "r") as f:
             try:
@@ -53,6 +52,7 @@ def _get_config(params, arg_name, subfolder):
 
 
 def recursive_dict_update(d, u):
+
     for k, v in u.items():
         if isinstance(v, collections.Mapping):
             d[k] = recursive_dict_update(d.get(k, {}), v)
